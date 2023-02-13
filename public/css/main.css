@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+}
+
+.logo-header {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 110px;
+  position: absolute;
+  top: -20px;
+  padding: 10px;
+}
+
+.nav-item a {
+  font-size: 27px;
+  align-content: space-around;
+  color: aliceblue;
+  margin: 3px;
+  padding: 3px;
+}
+.nav-item a:hover {
+  color: #e4db12;
+}
+.nav-item i {
+  position: relative;
+  left: 25px;
+  color: white;
+}
+.nav-item i:hover {
+  color: #e4db12;
+}
+
+/* carrousel */
+.carousel-inner > img {
+  height: 60rem;
+}
+
+.presentacion {
+  text-align: start;
+  line-height: 2em;
+}
+.presentacion img {
+  width: 100%;
+  position: relative;
+  left: -250px;
+}
+.presentacion h2 {
+  color: #e4db12;
+  padding: 100px;
+}
+
+.text-present p {
+  position: relative;
+  top: 10px;
+  align-items: center;
+  color: white;
+  font-size: 33px;
+}
+
+#galeria {
+  background-color: black;
+}
+#galeria img {
+  width: 95%;
+}
+#galeria .col-lg-6 {
+  margin: 0;
+  padding: 25px;
+}
+#galeria p {
+  position: absolute;
+  left: 22%;
+  font-size: 30px;
+}
+#galeria h2 {
+  color: #e4db12;
+}
+#galeria h5 {
+  font-size: 30px;
+}
+
+figcaption {
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.footer-nav {
+  width: 100%;
+  background-color: black;
+}
+.footer-nav .grupo1 {
+  width: 100%;
+  max-width: 100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 15px 0px;
+}
+.footer-nav .box-figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-nav .box h2 {
+  color: #e4db12;
+  margin-bottom: 15px;
+  font-size: 30px;
+  position: relative;
+  right: 300px;
+}
+.footer-nav .box p {
+  color: white;
+  margin-bottom: 10px;
+  position: relative;
+  right: 300px;
+  align-self: start;
+}
+.footer-nav .box h3 {
+  color: #e4db12;
+  font-size: 30px;
+}
+.footer-nav img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  min-height: 150px;
+  position: relative;
+  right: 680px;
+}
+.footer-nav .grupo2 {
+  background-color: black;
+  padding: 15px 10px;
+  text-align: center;
+  color: white;
+}
+.footer-nav small {
+  font-size: 25px;
+}
+
+#redes-sociales a {
+  display: block;
+  font-size: 45px;
+  width: 55px;
+  height: 5px;
+  padding: 10px;
+  position: relative;
+  left: 0px;
+  bottom: 20px;
+  transition: all 300ms ease;
+}
+#redes-sociales a:hover {
+  color: aqua;
+}
+#redes-sociales .fa-facebook {
+  color: blue;
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+}
+#redes-sociales .fa-twitter {
+  position: relative;
+  color: rgb(9, 162, 182);
+  top: 90px;
+  text-decoration: none;
+}
+#redes-sociales .fa-instagram {
+  position: relative;
+  color: orangered;
+  top: 170px;
+  text-decoration: none;
+}
+#redes-sociales .fa-youtube {
+  position: relative;
+  color: red;
+  top: 250px;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */
