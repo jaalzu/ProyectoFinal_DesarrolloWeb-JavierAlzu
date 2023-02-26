@@ -10,50 +10,24 @@ body{
     background-color: black;
 
 }
+/* header */ 
 
 header{
     background-color: $color_header;
+
+    .navbar-toggler{
+        color: $color-primario;
+        position: relative;
+        left: -140px;
+        width: 40%;
+        border: 2px solid $color-primario;
+        
+            }
 }
 
 textarea{
     @include formularios-modernos;
 }
-
-.contenido2{
-
-
-img{
-    width: 100%;
-height: 1000px;
-
-@include mobile{
-    display: none;
-}
-
-}
-}
-
-.contenido2{
-    p{ 
-        opacity: 0.9;
-        color: white;
-  font-size: size(10);
-  font-weight: 1000;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 0 0 8px black;
-  border-left: 1px;
-  border-right: 1px;
-    }
-    @include mobile{
-        display: none;
-    }
-}
-
-
-/* header */ 
 
 .logo-header{
     width: auto;
@@ -65,7 +39,10 @@ top: -20px;
 padding: 10px;
 
 @include mobile{
-    display: none;
+   width: 0%;
+}
+@include tablet{
+   width: 0%;
 }
 
 }
@@ -103,14 +80,15 @@ i:hover{
 /* formulario */ 
 
 input{
- @include formularios-modernos();
-input:focus{
-    background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  outline: none;
+   @include formularios-modernos();
+  
 }
+   
+.contenido1{
+ h2{
+    color: $color-primario;
+ }
 }
-
 
 p{
     color: $color-terciario;
@@ -122,16 +100,9 @@ hr{
     color: $color_primario;
 }
 
-.contenido1{
-margin: 5px;
-}
-
-
-
-
 form{
     p{
-        color: white;
+        color: $color-primario;
     position: relative;
     left: -90px;
     @include mobile{
@@ -144,122 +115,200 @@ form{
     height: 30px;
     position: relative;
     left: -30px;
-@include mobile{
-    
-}    
+
 }
 }
 
+.btn-enviar{
+    transition: all 0.4s ease-in-out;
+}
 
+.btn-enviar:hover{
+   background-color: $color-primario;
+   color: $color_terciario;
+}
 
 
 /* footer */ 
 
 
-.footer-nav{
-    width: 100%;
+footer {
+    position: relative;
+   bottom: 0;
+   border: 1px solid $color_primario;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer-nav {
     background-color: black;
- .grupo1{
+    box-sizing: border-box;
     width: 100%;
-    max-width: 100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 50px;
-    padding: 15px 0px;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+   
+}
+
+.footer-nav .footer-izquierdo, .footer-nav .footer-center, .footer-nav .footer-derecho {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer izquierdo*/
+
+.footer-nav .footer-izquierdo {
+    width: 30%;
+}
+
+.footer-nav h3 {
+    color: $color-terciario;
+    font: normal 36px;
+    margin: 0;
+font-size: 37px;
+}
+
+.footer-nav h3 span {
+    color: $color-primario;
+}
+
+/* Footer links */
+
+.footer-nav .footer-links {
+    color: $color-terciario;
+    margin: 20px 0 12px;
+    font-size: 20px;
+}
+
+.footer-nav .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
     
-    @include mobile{
-        display: flex;
-        grid-template-columns: repeat(1,1fr);
-    }
 }
- .box-figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-.box h2{
-    color: $color_primario;
-    margin-bottom: 15px;
-    font-size: 30px;
-position: relative;
-right: 300px;
+
+.footer-nav .footer-company-name {
+    color: gray;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
 }
-.box p{
+
+/* Footer Center */
+
+.footer-nav .footer-center {
+    width: 35%;
+
+}
+
+.footer-nav .footer-center i {
+    background-color: #33383b;
     color: $color-terciario;
-    margin-bottom: 10px;
-    position: relative;
-    right: 300px;
-    align-self: start;
-}
-
-.box h3{
-    color: $color_primario;
     font-size: 30px;
-}
-
-img{
-    width: auto;
-    height: auto;
-    max-width: 200px;
-    min-height: 150px;
-    position: relative;
-    right: 680px;
-}
-.grupo2{background-color:$color_header;
-    padding: 15px 10px;
+    width: 38px;
+    height: 38px;
+    border-radius: 60%;
     text-align: center;
-    color: $color-terciario;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+    
 }
-small{
+
+.footer-nav .footer-center i.fa-envelope {
     font-size: 25px;
+    line-height: 38px;
 }
 
+.footer-nav .footer-center p {
+    display: inline-block;
+    color: $color-terciario;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 21px;
 }
 
+.footer-nav .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
 
-#redes-sociales{
-    a{
-       display: block;
-        font-size: 45px;
-    width: 55px;
-    height: 5px;
-    padding: 10px;
-    position: relative;
-    left: 0px;
-    bottom: 20px;
- transition: all 300ms ease;
+.footer-nav .footer-center p a {
+    color: white;
+    text-decoration: none;
+   
+}
+
+/* Footer derecho */
+
+.footer-nav .footer-derecho {
+    width: 30%;
+}
+
+.footer-nav .footer-company-about {
+    line-height: 30px;
+    color: #92999f;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.footer-nav .footer-company-about span {
+    display: block;
+    color: $color-primario;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-nav .footer-iconos {
+    margin-top: 25px;
+ 
+}
+
+.footer-nav .footer-iconos a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 4px;
+    font-size: 27px;
+    color: $color-terciario;
+    text-align: center;
+    line-height: 45px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.footer-nav .footer-iconos a:hover {
+    background-color: $color-primario;
+}
+
+.footer-links a:hover {
+    color: $color-primario;
+}
+
+@media (max-width: 880px) {
+    .footer-nav .footer-izquierdo, .footer-nav .footer-center, .footer-nav .footer-derecho {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
     }
-    a:hover{
-        color: aqua;
+    .footer-nav .footer-center i {
+        margin-left: 0;
     }
-.fa-facebook{
-    color: blue;
-    position: relative;
-    top: 10px;
-text-decoration: none;  
-}
-.fa-twitter{
-    position: relative;
-        color: rgb(9, 162, 182);
-    top: 90px;
-text-decoration: none;   
-}
-.fa-instagram{
-    position: relative;
-    color: orangered;
-top: 170px;
-text-decoration: none; 
-}
-.fa-youtube{
-    position: relative;
-    color: red;
-    top: 250px;
-text-decoration: none;   
-}
-
-}
-
-
+}       
